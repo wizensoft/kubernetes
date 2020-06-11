@@ -1,0 +1,19 @@
+version: '3'
+services:
+  wordpress:
+    image: wordpress
+    environment:
+      WORDPRESS_DB_HOST: mysql
+      WORDPRESS_DB_NAME: annguk
+      WORDPRESS_DB_USER: annguk
+      WORDPRESS_DB_PASSWORD: annguk
+    ports:
+      - "2005:80"
+    restart: always
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: annguk
+      MYSQL_DATABASE: annguk
+      MYSQL_USER: annguk
+      MYSQL_PASSWORD: annguk
