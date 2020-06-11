@@ -11,6 +11,8 @@ docker와 kubernetes의 기본 기능을 알아보자.
 
 ## 2. Docker 기본
 
+- Docker 실습
+- Docker Compose 실습
 
 
 ## 3. K8s 기본
