@@ -20,11 +20,9 @@
 
 ### 도커 컴포즈 실습
 
-`guide-02`라는 폴더를 만듭니다.
-
 **간단한 웹 애플리케이션 생성**
 
-docker-compose/docker-compose.yml
+docker-compose/nginx/docker-compose.yml
 
 ```yml
 version: '3'
@@ -32,18 +30,18 @@ services:
   web:
     image: nginx
     ports:
-      - "2005:80"
+      - "1005:80"
 ```
 
 ```
 docker-compose up -d
 ```
 
-curl http://172.42.42.2:2005
+curl http://172.42.42.2:1005
 
 **wordpress 생성**
 
-guide-02/wordpress/docker-compose.yml
+docker-compose/wordpress/docker-compose.yml
 
 ```yml
 version: '3'
