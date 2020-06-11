@@ -24,10 +24,10 @@ docker run --rm -it centos:7 /bin/sh
 **간단한 웹 애플리케이션 생성**
 
 ```
-docker run -d -p 4567:80 nginx
+docker run -d -p 1005:80 nginx
 ```
 
-curl http://172.42.42.2:4567
+curl http://172.42.42.2:2005
 
 **MySQL 생성**
 
@@ -51,7 +51,7 @@ quit
 **Wordpress 생성**
 
 ```
-docker run -d -p 8000:80 \
+docker run -d -p 2005:80 \
   -e WORDPRESS_DB_HOST=172.42.42.2 \
   -e WORDPRESS_DB_NAME=annguk \
   -e WORDPRESS_DB_USER=annguk \
@@ -59,7 +59,7 @@ docker run -d -p 8000:80 \
   wordpress
 ```
 
-curl http://172.42.42.2:8000
+curl http://172.42.42.2:2005
 
 **컨테이너 목록 확인**
 
