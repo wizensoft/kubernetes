@@ -27,7 +27,6 @@ docker run --rm -it centos:7 /bin/sh
 docker run -d -p 4567:80 nginx
 ```
 
-접속
 curl http://172.42.42.2:4567
 
 **MySQL 생성**
@@ -60,7 +59,6 @@ docker run -d -p 8000:80 \
   wordpress
 ```
 
-접속
 http://172.42.42.2:8000
 
 **컨테이너 목록 확인**
