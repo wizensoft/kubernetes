@@ -15,4 +15,17 @@ docker와 kubernetes의 기본 기능을 알아보자.
 - Docker Compose 실습
 
 
-## 3. K8s 기본
+## 3. Kube 기본
+
+- 기본 실습
+
+### 마이크로 서비스 기본
+
+- ingress gateway
+kubectl expose deploy nginx-deploy-main --port 80
+
+### 모니터링 되는 서비스 
+
+- istio ingress gateway
+
+
