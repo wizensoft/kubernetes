@@ -19,13 +19,23 @@ docker와 kubernetes의 기본 기능을 알아보자.
 
 - 기본 실습
 
-### 마이크로 서비스 기본
+### 마이크로 서비스 트래픽
 
-- ingress gateway
-kubectl expose deploy nginx-deploy-main --port 80
+- istio - bookinfo
+kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
+kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml
 
-### 모니터링 되는 서비스 
+- 부하 발생
+watch curl -s -o /dev/null 192.168.137.240/productpage
 
-- istio ingress gateway
+#### Kiali traffic management
 
+- Weighted Routing
+: Reviews > Create Weighted : Update Weighted Routing
+
+- Matching Routing
+samples/bookinfo/networking/virtual-service-reviews-test-v2.yaml
+: haders > end-user > exact > annguk
+
+#### Scaleout management
 
