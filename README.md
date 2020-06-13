@@ -49,4 +49,18 @@ samples/bookinfo/networking/virtual-service-reviews-test-v2.yaml
  kubectl top pods
  kubectl top nodes 
  ```
+- Sample 10m
+``` yaml
+kubectl apply -f  1-nginx-deployment.yaml
+kubectl expose -n wizen deploy nginx-deploy --port 80 --type NodePort 
+kubectl -n wizen get all -o wide
+http://kworker1:32416
 
+# Replica, cpu 설정
+kubectl autoscale -n wizen deploy nginx-deploy --min 1 --max 5 --cpu-percent 20
+
+# 부하
+siege –q –c 5 –t 2m http://kworker1:32416
+
+
+```
