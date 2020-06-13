@@ -47,5 +47,6 @@ samples/bookinfo/networking/virtual-service-reviews-test-v2.yaml
 ``` yaml 
  kubectl -n kube-system top pods
  kubectl top pods
+ kubectl top nodes 
  ```
 
