@@ -41,5 +41,11 @@ samples/bookinfo/networking/virtual-service-reviews-test-v2.yaml
 ```
 : haders > end-user > exact > annguk
 
-#### Scaleout management
+#### Horizontal Pod Autoscaler management
+
+- Metrics Service 
+``` yaml 
+ kubectl -n kube-system top pods
+ kubectl top pods
+ ```
 
