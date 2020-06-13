@@ -22,8 +22,10 @@ docker와 kubernetes의 기본 기능을 알아보자.
 ### 마이크로 서비스 트래픽
 
 - istio - bookinfo
+```yaml
 kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
 kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml
+```
 
 - 부하 발생
 watch curl -s -o /dev/null 192.168.137.240/productpage
@@ -34,7 +36,9 @@ watch curl -s -o /dev/null 192.168.137.240/productpage
 : Reviews > Create Weighted : Update Weighted Routing
 
 - Matching Routing
+```yaml
 samples/bookinfo/networking/virtual-service-reviews-test-v2.yaml
+```
 : haders > end-user > exact > annguk
 
 #### Scaleout management
