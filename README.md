@@ -29,7 +29,9 @@ kubectl apply -f samples/bookinfo/networking/destination-rule-all.yaml
 ```
 
 - 부하 발생
+````yaml
 watch curl -s -o /dev/null 192.168.137.240/productpage
+````
 
 #### Kiali traffic management
 
@@ -41,6 +43,12 @@ watch curl -s -o /dev/null 192.168.137.240/productpage
 samples/bookinfo/networking/virtual-service-reviews-test-v2.yaml
 ```
 : haders > end-user > exact > annguk
+
+#### Grafana dashboard(Querying Metrics from Prometheu)
+
+````yaml
+kubectl -n istio-system port-forward grafana-54485b765d-t57np 3000:3000
+````
 
 #### Horizontal Pod Autoscaler management
 
