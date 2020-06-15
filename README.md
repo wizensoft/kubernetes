@@ -23,9 +23,8 @@ docker와 kubernetes의 기본 기능을 알아보자.
 
 - istio - bookinfo
 ```yaml
-kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
-kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml
-kubectl apply -f samples/bookinfo/networking/destination-rule-all.yaml
+kubectl apply -f demo/bookinfo/bookinfo-gateway.yaml
+kubectl apply -f demo/bookinfo/bookinfo.yaml
 ```
 
 - 부하 발생
