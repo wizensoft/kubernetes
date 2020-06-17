@@ -46,7 +46,7 @@ samples/bookinfo/networking/virtual-service-reviews-test-v2.yaml
 #### Grafana dashboard(Querying Metrics from Prometheu)
 
 ````yaml
-kubectl -n istio-system port-forward grafana-54485b765d-t57np 3000:3000
+kubectl -n istio-system port-forward $(kubectl -n istio-system get pod -l app=grafana -o jsonpath='{.items[0].metadata.name}') 3000:3000
 ````
 
 #### Horizontal Pod Autoscaler management
